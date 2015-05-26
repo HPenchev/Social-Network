@@ -1,28 +1,29 @@
 app.controller('WelcomeController',
     function ($scope, $location, authService, notifyService) {
         $scope.userData = {};
+        $scope.loginData = {};
         $scope.register = function(userData) {
+            console.log(userData);
             authService.register(userData,
                 function success() {
-                    console.log("Registration successful");
-                    //notifyService.showInfo("Registration successful");
+                    notifyService.showInfo("Registration successful");
+                    $scope.login(userData);
                 },
                 function error(err) {
-                    console.log(err);
-                    //notifyService.showError("User registration failed", err);
+                    notifyService.showInfo(err);
                 }
             );
         };
-        $scope.login = function(userData) {
-            authService.login(userData,
+        $scope.login = function(loginData) {
+            authService.login(loginData,
                 function success() {
-                    console.log("login successful")
-                    //notifyService.showInfo("Login successful");
-                    //$location.path("/");
+                    console.log("login successful");
+                    notifyService.showInfo("Login successful")
+                    console.log(authService.isLoggedIn());
+                    $location.path("/");
                 },
                 function error(err) {
-                    console.log(err);
-                    //notifyService.showError("invalid login ", err);
+                    notifyService.showError("invalid login ", err);
                 }
             );
         };

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="app" ng-controller="AppController">
+<html ng-app="app" ng-controller='AppController'>
 <head>
     <title>Social Network</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/social-network.css" />
 </head>
-<body ng-app="SocialNetwork">
-    <div ng-view>
-    </div>
-
+<body>
+    <header ng-controller="HeaderController">
+        <div ng-include="'templates/partial/header.html'"></div>
+    </header>
+    <main>
+        <div ng-view>
+        </div>
+    </main>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.js"></script>
     <script src="lib/angular/angular-resource.js"></script>
@@ -20,10 +24,13 @@
 
     <script type="text/javascript" src="js/app.js"></script>
 
-    <script type="text/javascript/controllers" src="js/controllers/AppController.js"></script>
-    <script type="text/javascript/controllers" src="js/controllers/WelcomeController.js"></script>
+    <script type="text/javascript" src="js/controllers/AppController.js"></script>
+    <script type="text/javascript" src="js/controllers/WelcomeController.js"></script>
+    <script type="text/javascript" src="js/controllers/HeaderController.js"></script>
 
-    <script type="text/javascript/services" src="js/services/authServices.js"></script>
+    <script type="text/javascript" src="js/services/authServices.js"></script>
+    <script type="text/javascript" src="js/services/notifyServices.js"></script>
+
 
 
 </body>

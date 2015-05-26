@@ -1,5 +1,7 @@
 app.controller('AppController',
-    function ($scope, authService, notifyService) {
-
+    function ($scope, authService) {
+        $scope.isLoggedIn = function() {
+            return authService.isLoggedIn();
+        }
     }
 );

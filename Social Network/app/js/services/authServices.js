@@ -24,6 +24,11 @@ app.factory('authService',
                     sessionStorage['currentUser'] = JSON.stringify(data);
                     success(data);
                 }).error(error);
+            },
+
+            isLoggedIn : function() {
+                console.log(sessionStorage['currentUser'] !== undefined);
+                return sessionStorage['currentUser'] !== undefined;
             }
         }
     }

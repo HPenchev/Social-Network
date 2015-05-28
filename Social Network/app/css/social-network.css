@@ -12,6 +12,19 @@
     text-align: center;
 }
 
+#profile-picture-data {
+    max-width: 50px;
+}
+
+#change-profile-details {
+    margin-right: 2px;
+    margin-left: 15%;
+}
+
+#edit-profile-radio-buttons {
+    width: 100%;
+}
+
 .form-control {
     margin-left: 2%;
 }
@@ -29,4 +42,8 @@
 .form-container-main {
     margin-left: 15%;
     margin-right: auto;
+}
+
+.picture-preview {
+    max-width: 50%;
 }

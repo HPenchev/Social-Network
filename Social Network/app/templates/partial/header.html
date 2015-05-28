@@ -1,0 +1,31 @@
+<nav ng-controller="HeaderController" class="navbar navbar-default navbar-static-top"   ng-if="isLoggedIn()">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="">
+            </a>
+        </div>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="#"><input type="image" src="images/newsfeed-small.png"/></a></li>
+            <li role="presentation"><input type="image" src="images/friend-requests.png"/></li>
+            <li role="presentation"><a href="#/profile"><input type="image" src="images/edit-profile.png"/></a></li>
+            <li role="presentation"><a href="#"><input type="image" src="images/change-password.png"/></a></li>
+            <li role="presentation"><a href="#"><input type="image" src="images/logout.png"/></a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="seach" class="form-control" placeholder="Search">
+            </div>
+        </form>
+    </div>
+</nav>
+
+<!--<nav class="navbar navbar-default">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">-->
+                <!--<img alt="Brand" src="...">-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->

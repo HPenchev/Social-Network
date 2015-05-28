@@ -9,10 +9,15 @@ app.config(function ($routeProvider) {
         });
     } else {
         $routeProvider.when('/', {
-            templateUrl: 'templates/userHomePage.html',
-            controller: 'WelcomeController'
+            templateUrl: 'templates/userHomePage.html'
+           // controller: 'WelcomeController'
         });
     }
+
+    $routeProvider.when('/profile', {
+        templateUrl: 'templates/editUserProfile.html'
+        //controller: 'WelcomeContr'
+    })
 });
 
 app.run(function ($rootScope, $location, authService) {

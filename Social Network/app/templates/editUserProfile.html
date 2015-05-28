@@ -1,0 +1,75 @@
+<div class='col-md-8 form-container-main'>
+
+    <div class="col-lg-30" id="#">
+        <div class="well bs-component" id="">
+            <legend>Edit Profile</legend>
+            <form class="form-horizontal">
+                <fieldset>
+                    <div class="col-lg-4" id="upload-profile-picture">
+                        <div class="picture-upload">
+                            <div class="form-group">
+                                <img class="thumbnail picture-preview" alt="profile-picture" id="profilePictureData" src="{{ userData.profileImageData }}" />
+                            </div>
+                            <div class="form-group">
+                                <p class="picture-name"></p>
+                                <input type="file" id="picture" class="btn btn-md"/>
+                                <p>Size limit: 128KB</p>
+                                <button type="button" id="upload-file-button" class="btn btn-md btn-info">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" id="change-profile-details">
+                        <div class="form-group">
+                            <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputUsername" ng-model="loginData.username" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" ng-model="loginData.password" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="radio">
+                                <label class="radio-button">
+                                    <input type="radio" name="gender" value="male" checked="" ng-model="userData.gender" required>
+                                    Male
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="gender" value="female" checked="" ng-model="userData.gender" required>
+                                    Female
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="gender" value="azis" checked="" ng-model="userData.gender" required>
+                                    Azis
+                                </label>
+                            </div>
+                        </div>
+                        <div class="picture-upload">
+                            <div class="form-group">
+                                <div clas="form-group">
+                                    <label style="margin-left: 20px;" class="col-lg-3 control-label">Cover Image:</label>
+                                    <img class="thumbnail picture-preview" alt="profile-picture" id="edit-profile-radio-buttons" src="{{ userData.profileImageData }}" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" id="coverPicture" />
+                                    <p>Size limit: 1028KB</p>
+                                    <button type="button" id="upload-cover-file-button" class="btn btn-md btn-info">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                 </div>
+                        </div>
+                </fieldset>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <input type="button" class="btn btn-primary btn-welcome" id="login" value="Save Changes" ng-click="login(loginData)">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -27,8 +27,17 @@ app.factory('authService',
             },
 
             isLoggedIn : function() {
-                console.log(sessionStorage['currentUser'] !== undefined);
                 return sessionStorage['currentUser'] !== undefined;
+            },
+
+            getCurrentUser: function(success, error) {
+                var request = {
+                        method: 'GET',
+                        url: baseServiceUrl + '/api/me'
+                };
+                $http(request).success(function(data) {
+                    success(data);
+                }).error(error);
             }
         }
     }
